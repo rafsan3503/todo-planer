@@ -1,4 +1,4 @@
-import 'package:feature_first_template/src/utils/constants/colors.dart';
+import 'package:feature_first_template/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextTheme {

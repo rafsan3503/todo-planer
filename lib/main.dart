@@ -1,5 +1,5 @@
-import 'package:feature_first_template/src/features/auth/view/screens/splash_screen.dart';
-import 'package:feature_first_template/src/utils/theme/theme.dart';
+import 'package:feature_first_template/ui/screens/splash/screens/splash_screen.dart';
+import 'package:feature_first_template/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Todo Planner',
       themeMode: ThemeMode.dark,
       theme: AppThemeData.appDarkTheme,
+      debugShowCheckedModeBanner: false,
 
-      // theme: ThemeData.dark(),
       home: Scaffold(body: SplashScreen()),
     );
   }
