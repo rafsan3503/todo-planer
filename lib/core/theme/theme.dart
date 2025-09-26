@@ -7,6 +7,10 @@ class AppThemeData {
 
   static ThemeData appDarkTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.appBackgroundColor,
+    appBarTheme: AppBarTheme(backgroundColor: AppColors.appBackgroundColor),
+    bottomAppBarTheme: BottomAppBarThemeData(
+      color: AppColors.appBackgroundColor,
+    ),
 
     fontFamily: "Roboto",
     brightness: Brightness.dark,
@@ -15,12 +19,16 @@ class AppThemeData {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.appPrimaryColor,
-        padding: EdgeInsets.symmetric(vertical: 16),
+        padding: EdgeInsets.symmetric(vertical: 8),
         textStyle: AppTextTheme.appTextTheme.titleSmall,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusGeometry.circular(12),
         ),
       ),
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColors.violet,
+      iconSize: 32,
     ),
   );
 }

@@ -2,6 +2,7 @@ import 'package:feature_first_template/core/constants/colors.dart';
 
 import 'package:feature_first_template/core/utility/device_utility.dart';
 import 'package:feature_first_template/core/theme/custom_themes/text_theme.dart';
+import 'package:feature_first_template/ui/screens/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class UsernameInputScreen extends StatelessWidget {
@@ -46,11 +47,16 @@ class UsernameInputScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                width: DeviceUtility.appDeviceWidth(context) * 0.85,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Get Start"),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: SizedBox(
+                  width: DeviceUtility.appDeviceWidth(context) * 0.85,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      DeviceUtility.navigateToPage(context, HomeScreen());
+                    },
+                    child: Text("Get Start"),
+                  ),
                 ),
               ),
             ],

@@ -29,7 +29,7 @@ class AppTextTheme {
     ),
     titleMedium: TextStyle().copyWith(
       color: AppColors.appWhiteColor,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       fontSize: 18,
     ),
     titleSmall: TextStyle().copyWith(

@@ -1,29 +1,26 @@
 import 'package:feature_first_template/core/constants/colors.dart';
 import 'package:feature_first_template/core/constants/device.dart';
 import 'package:feature_first_template/core/utility/device_utility.dart';
+import 'package:feature_first_template/ui/screens/setting/screens/profile_edit_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class OnboardingCardWidget extends StatelessWidget {
-  const OnboardingCardWidget({
-    super.key,
-    required this.flagColor,
-    required this.cardTitle,
-    required this.cardSubTitle,
-  });
-
-  final Color flagColor;
-  final String cardTitle;
-  final String cardSubTitle;
+class SettingProfileCardWidget extends StatelessWidget {
+  const SettingProfileCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 8.0,
+    return InkWell(
+      onTap: () {
+        DeviceUtility.navigateToPage(context, ProfileEditScreen());
+      },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
         height: AppDevice.onBoardingCardHeight,
-
+        decoration: BoxDecoration(
+          color: AppColors.appTextInputBackground,
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,14 +29,22 @@ class OnboardingCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                Icon(Iconsax.tick_circle4, color: AppColors.appPrimaryColor),
+                Container(
+                  height: 56,
+                  width: 56,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.appPurpleColor,
+                  ),
+                  child: Icon(Iconsax.user),
+                ),
                 SizedBox(width: 12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      cardTitle,
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      "Mahmud Hsan",
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     Text(
                       "7,june,2023",
@@ -51,7 +56,6 @@ class OnboardingCardWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Icon(Iconsax.flag_25, color: flagColor),
           ],
         ),
       ),
