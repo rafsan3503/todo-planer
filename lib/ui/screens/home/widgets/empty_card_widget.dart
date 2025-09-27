@@ -1,4 +1,5 @@
 import 'package:feature_first_template/core/constants/colors.dart';
+import 'package:feature_first_template/core/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -9,16 +10,19 @@ class EmptyCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6.5, vertical: 15),
-        width: 176,
+        padding: EdgeInsets.symmetric(
+          horizontal: AppSizes.sm,
+          vertical: AppSizes.lg,
+        ),
+        width: AppSizes.emptyCardHeight,
 
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             tickIcon == null
                 ? Container(
-                    width: 15,
-                    height: 15,
+                    width: AppSizes.lg,
+                    height: AppSizes.lg,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
@@ -48,7 +52,7 @@ class EmptyCardWidget extends StatelessWidget {
                     color: AppColors.appGrayColor400,
                   ),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: AppSizes.sm),
                 Container(
                   width: 60,
                   height: 7,

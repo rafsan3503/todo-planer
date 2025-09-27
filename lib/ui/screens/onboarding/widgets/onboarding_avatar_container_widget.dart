@@ -1,4 +1,3 @@
-import 'package:feature_first_template/core/constants/device.dart';
 import 'package:feature_first_template/core/constants/image_strings.dart';
 import 'package:feature_first_template/core/utility/device_utility.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +14,9 @@ class OnboardingAvatarContainerWidget extends StatelessWidget {
 
       child: Image.asset(
         AppImageStrings.onboardingBackground,
-        width: AppDevice.deviceFullWidth,
-        height: DeviceUtility.appDeviceHeight(context) * 0.5,
-        fit: BoxFit.cover,
-        scale: 2,
+        width: double.infinity,
+        height: DeviceUtility.appDeviceHeight(context) * 0.50,
+        fit: BoxFit.fill,
       ),
     );
   }

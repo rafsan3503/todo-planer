@@ -19,7 +19,7 @@ class DatesGridWidget extends StatelessWidget {
       child: GridView.builder(
         itemCount: calendarDays.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          childAspectRatio: 1.2,
+          childAspectRatio: 1,
           mainAxisSpacing: 8,
           crossAxisSpacing: 8,
 

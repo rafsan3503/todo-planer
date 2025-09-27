@@ -1,4 +1,5 @@
 import 'package:feature_first_template/core/constants/colors.dart';
+import 'package:feature_first_template/core/constants/sizes.dart';
 import 'package:feature_first_template/ui/screens/home/widgets/category_tabs_widget.dart';
 import 'package:feature_first_template/ui/screens/home/widgets/empty_item_widget.dart';
 import 'package:feature_first_template/ui/screens/home/widgets/home_tasks_screen.dart';
@@ -12,7 +13,7 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> tasks = ["Item"];
+    final List<String> tasks = ["item"];
 
     return Scaffold(
       appBar: AppBar(
@@ -21,7 +22,7 @@ class Dashboard extends StatelessWidget {
         title: NavbarTitleWidget(),
         automaticallyImplyLeading: false,
         actions: [SettingIcon()],
-        actionsPadding: EdgeInsets.symmetric(horizontal: 16),
+        actionsPadding: EdgeInsets.symmetric(horizontal: AppSizes.lg),
       ),
       body: Column(
         children: [

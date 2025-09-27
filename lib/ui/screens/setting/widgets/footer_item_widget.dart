@@ -14,10 +14,12 @@ class FooterItemWidget extends StatelessWidget {
         Container(
           width: 56,
           height: 56,
+
           margin: EdgeInsets.only(bottom: 8),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(width: 1, color: AppColors.appPurpleColor),
+            color: AppColors.appGrayColor800,
           ),
           child: icon,
         ),

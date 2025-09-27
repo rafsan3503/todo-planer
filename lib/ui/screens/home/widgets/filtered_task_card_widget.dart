@@ -1,7 +1,8 @@
 import 'package:feature_first_template/core/constants/colors.dart';
+import 'package:feature_first_template/core/constants/sizes.dart';
 
 import 'package:feature_first_template/core/utility/device_utility.dart';
-import 'package:feature_first_template/ui/screens/onboarding/widgets/onboarding_card_widget.dart';
+import 'package:feature_first_template/ui/widgets/card_design.dart';
 import 'package:feature_first_template/ui/screens/task_details/screens/task_details_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,18 +23,25 @@ class FilteredTaskCardWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            categoryTaskTitle,
-            style: Theme.of(context).textTheme.titleMedium,
+          Container(
+            padding: EdgeInsets.all(AppSizes.defaultSize),
+            child: Text(
+              categoryTaskTitle,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
           ),
-          SizedBox(height: 10),
+
           Expanded(
             child: ListView.builder(
               itemCount: futureTasks.length,
-              itemBuilder: (context, index) => OnboardingCardWidget(
-                flagColor: AppColors.appRedColor,
-                cardTitle: "Doing housework",
-                cardSubTitle: "7,june,2023",
+              itemBuilder: (context, index) => Container(
+                margin: EdgeInsets.only(bottom: AppSizes.sm),
+                child: CardDesign(
+                  leadingIcon: Icon(Icons.radio_button_off_outlined),
+                  flagColor: AppColors.appRedColor,
+                  cardTitle: "Doing housework",
+                  cardSubTitle: "7,june,2023",
+                ),
               ),
             ),
           ),
